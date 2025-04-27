@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import templates.app, templates.DescriptionAlgorithm
 
-st.title('Machine Learning Algorithms Analysis: ')
+# st.title('Machine Learning Algorithms Analysis: ')
 
 # Main application class
 class MultiApp:
@@ -21,8 +21,8 @@ class MultiApp:
             # Using Markdown for styling
             app = option_menu(
                 menu_title='Menu',
-                options=["Description Algorithm", 'Algorithm' ],
-                icons=['house-fill', "cloud-arrow-up", "gear", "building-fill-gear", "card-text"],
+                options=["Algorithm Description", 'Algorithm', 'Notebook'],
+                icons=['house-fill', "cloud-arrow-up", "journal-code", "card-text", "card-text"],
                 menu_icon='list',
                 default_index=0,
             )
@@ -30,8 +30,12 @@ class MultiApp:
         # Route to the selected page
         if app == "Algorithm":
             templates.app.app()
-        elif app == "Description Algorithm":
+        elif app == "Algorithm Description":
             templates.DescriptionAlgorithm.app()
+        elif app == "Notebook":
+            # Check if Random Forest is selected in the app.py
+            # This will be handled in templates.app
+            templates.app.app(show_notebook=True)
 
 
 # Display main application

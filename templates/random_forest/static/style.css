@@ -1,0 +1,19 @@
+/* Custom styling for the Streamlit app */
+.stButton button {
+    width: 100%;
+    border-radius: 5px;
+    height: 3em;
+}
+
+.stMetric {
+    background-color: #f0f2f6;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.stPlotlyChart {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

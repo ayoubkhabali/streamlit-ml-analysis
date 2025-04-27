@@ -1,4 +1,5 @@
 import streamlit as st
+import templates.random_forest.src.rf_description as random_forest_desc
 
 def app():
     # Sidebar menu
@@ -60,55 +61,7 @@ def app():
             """)
 
     elif algorithm == 'Random Forests':
-        st.header('Random Forests')
-        
-        with st.expander('Description'):
-            st.markdown("""
-            Random Forests is an ensemble learning method that operates by constructing multiple decision trees
-            during training and outputting the class that is the mode of the classes (classification) or mean
-            prediction (regression) of the individual trees.
-            """)
-        
-        with st.expander('Characteristics'):
-            st.markdown("""
-            - Ensemble of decision trees
-            - Random feature selection
-            - Bootstrap sampling (Bagging)
-            - Parallel processing capability
-            """)
-        
-        with st.expander('Operation Mode'):
-            st.markdown("""
-            1. **Bootstrap Sampling**: Create multiple datasets from original data
-            2. **Random Feature Selection**: Select random subset of features
-            3. **Tree Building**: Build decision trees on bootstrap samples
-            4. **Aggregation**: Combine predictions using voting or averaging
-            """)
-        
-        with st.expander('Advantages and Disadvantages'):
-            st.subheader('Advantages')
-            st.markdown("""
-            - Higher accuracy than single decision trees
-            - Good handling of overfitting
-            - Can handle large datasets
-            - Provides feature importance rankings
-            """)
-            
-            st.subheader('Disadvantages')
-            st.markdown("""
-            - Less interpretable than single decision trees
-            - Computationally intensive
-            - Requires more memory
-            - May overfit in some noisy classification/regression tasks
-            """)
-        
-        with st.expander('Application Domains'):
-            st.markdown("""
-            - Financial market prediction
-            - Healthcare diagnostics
-            - Image classification
-            - Remote sensing
-            """)
+        random_forest_desc.show_rf_description()
 
     else:  # K-Medoids
         # Title
