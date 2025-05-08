@@ -20,17 +20,17 @@ class MultiApp:
             # st.image("assets/image.png", use_container_width=True)
             # Using Markdown for styling
             app = option_menu(
-                menu_title='Menu',
-                options=["Description Algorithm", 'Algorithm' ],
+                menu_title='Algorithmes',
+                options=["Description", 'Implémentation' ],
                 icons=['house-fill', "cloud-arrow-up", "gear", "building-fill-gear", "card-text"],
                 menu_icon='list',
                 default_index=0,
             )
 
         # Route to the selected page
-        if app == "Algorithm":
+        if app == "Implémentation":
             templates.app.app()
-        elif app == "Description Algorithm":
+        elif app == "Description":
             templates.DescriptionAlgorithm.app()
 
 
